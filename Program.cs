@@ -2,7 +2,7 @@
 using coreConsoleApplication;
 
 Console.WriteLine("Hello, Welcome to the World of C#!\n\n");
-Console.WriteLine("TESTING");
+
 /*
 // Instantiating my student class
 Student student = new Student();
@@ -38,11 +38,17 @@ savingAcc.deposite();
 savingAcc.withdraw();
 savingAcc.balance();
 savingAcc.closeAccount();
-*/
+
 
 // So we cannot create an instance of Satice class 
 Console.WriteLine(Calculate.increment());
 Console.WriteLine(Calculate.increment());
 Console.WriteLine(Calculate.increment());
 
-Console.WriteLine(Calculate.decrement());  
+Console.WriteLine(Calculate.decrement());
+*/
+
+// Extension Methhods 
+int number = 1000;
+bool result = number.IsGreaterThan(10001);
+Console.WriteLine(result);
