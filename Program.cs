@@ -47,8 +47,17 @@ Console.WriteLine(Calculate.increment());
 
 Console.WriteLine(Calculate.decrement());
 */
-
+/*
 // Extension Methhods 
 int number = 1000;
 bool result = number.IsGreaterThan(10001);
 Console.WriteLine(result);
+
+*/
+
+// Instance of Employee Class
+
+var employee = new Employee();
+Console.WriteLine(employee.EmpId);
+Console.WriteLine(employee.EmpName);
+employee.DisplayDetails();
