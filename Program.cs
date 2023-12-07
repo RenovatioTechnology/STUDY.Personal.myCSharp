@@ -29,7 +29,7 @@ savingaccount.getMessage();
 savingaccount.deposite();
 savingaccount.withdraw();
 savingaccount.balance();
-*/
+
 
 // Instantiating SavingAcc
 SavingAcc savingAcc = new SavingAcc();
@@ -38,3 +38,11 @@ savingAcc.deposite();
 savingAcc.withdraw();
 savingAcc.balance();
 savingAcc.closeAccount();
+*/
+
+// So we cannot create an instance of Satice class 
+Console.WriteLine(Calculate.increment());
+Console.WriteLine(Calculate.increment());
+Console.WriteLine(Calculate.increment());
+
+Console.WriteLine(Calculate.decrement());  
