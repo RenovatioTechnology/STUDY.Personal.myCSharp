@@ -72,7 +72,7 @@ user.Age = 34;
 Console.WriteLine(user.Name);
 Console.WriteLine(user.CompanyName);
 Console.WriteLine(user.Age);
-*/
+
 
 // Indexer
 IndexerType indexerType = new IndexerType();
@@ -84,4 +84,8 @@ indexerType[4] = "String four";
 // For loop excute till 10
 for(int i = 0; i < 10; i++)
     Console.WriteLine(indexerType[i]);  
-    
+*/
+
+// Instantiating EnumDemo class
+EnumDemo enumDemo = new EnumDemo();
+enumDemo.Display();
