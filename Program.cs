@@ -61,7 +61,7 @@ var employee = new Employee();
 Console.WriteLine(employee.EmpId);
 Console.WriteLine(employee.EmpName);
 employee.DisplayDetails();
-*/
+
 
 // Instantiating User for Properties 
 User user = new User();
@@ -72,3 +72,16 @@ user.Age = 34;
 Console.WriteLine(user.Name);
 Console.WriteLine(user.CompanyName);
 Console.WriteLine(user.Age);
+*/
+
+// Indexer
+IndexerType indexerType = new IndexerType();
+indexerType[0] = "String one";
+indexerType[2] = "String two";
+indexerType[3] = "String three";
+indexerType[4] = "String four";
+
+// For loop excute till 10
+for(int i = 0; i < 10; i++)
+    Console.WriteLine(indexerType[i]);  
+    
