@@ -84,8 +84,18 @@ indexerType[4] = "String four";
 // For loop excute till 10
 for(int i = 0; i < 10; i++)
     Console.WriteLine(indexerType[i]);  
-*/
+
 
 // Instantiating EnumDemo class
 EnumDemo enumDemo = new EnumDemo();
 enumDemo.Display();
+
+*/
+
+
+// Instantiating Calculation 
+Calculation calculation = new Calculation();
+// if 100 / 0 will throw an error 
+//calculation.Calculate(100,0);
+// Value tobe taken from the user
+calculation.CalculateAnother();
