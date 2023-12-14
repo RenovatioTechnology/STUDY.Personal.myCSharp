@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using coreConsoleApplication;
 
-Console.WriteLine("Hello, Welcome to the World of C#!\n\n");
+Console.WriteLine("Hello! Welcome to the World of C#!\n");
 
 /*
 // Instantiating my student class
@@ -90,7 +90,7 @@ for(int i = 0; i < 10; i++)
 EnumDemo enumDemo = new EnumDemo();
 enumDemo.Display();
 
-*/
+
 
 
 // Instantiating Calculation 
@@ -99,3 +99,52 @@ Calculation calculation = new Calculation();
 //calculation.Calculate(100,0);
 // Value tobe taken from the user
 calculation.CalculateAnother();
+
+*/
+
+/*
+// Anonymous Type
+var obj = new
+{
+    fName = "Shallu",
+    lName = "Nah",
+    salary = "12000",
+    // Storing nested object in the type
+    address = new { streetName = "Woodland Hills", city = "Springs" },
+    // Storing Arrays of Project
+    projects = new[]
+    {
+        new { projectName = "ECommerce", projectDuration = "40 Hours"},
+        new { projectName = "Admin Portal", projectDuration = "25 Hours"},
+        new { projectName = "Accounting", projectDuration = "30 Hours"}
+    }
+};
+
+// For Access 
+Console.WriteLine("First Name: " + obj.fName);
+Console.WriteLine(obj.lName);
+Console.WriteLine(obj.salary);
+// Complete address
+Console.WriteLine(obj.address);
+// Specific Attr
+Console.WriteLine(obj.address.streetName);
+Console.WriteLine("City: " + obj.address.city);
+
+// Access Project Type with foreach Iterations 
+foreach (var project in obj.projects)
+{
+    Console.WriteLine(project.projectName +": " + project.projectDuration);
+}    
+
+*/
+
+// Reference to Calculate Delegate Example Class
+
+CalculateDelegate c1 = new CalculateDelegate(DelegateExample.Addition);
+CalculateDelegate c2 = new CalculateDelegate(DelegateExample.Multiplication);
+
+//
+c1(100);
+Console.WriteLine(DelegateExample.getNumber());
+c2(200);
+Console.WriteLine(DelegateExample.getNumber());
