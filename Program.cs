@@ -136,7 +136,7 @@ foreach (var project in obj.projects)
     Console.WriteLine(project.projectName +": " + project.projectDuration);
 }    
 
-*/
+
 
 // Reference to Calculate Delegate Example Class
 
@@ -148,3 +148,18 @@ c1(100);
 Console.WriteLine(DelegateExample.getNumber());
 c2(200);
 Console.WriteLine(DelegateExample.getNumber());
+
+ */
+
+// Instantiate EVENTS, The Subscriber Model
+
+EventsExample events = new EventsExample();
+
+//events.event_OddNumber, holding the reference of addition method from EventExample.delegate_OddNumber, passing a message
+events.Event_OddNumber += new EventsExample.Delegate_OddNumber(EventMessage);
+events.Addition();
+Console.ReadLine();
+static void EventMessage()
+{
+    Console.WriteLine("Event Executed : Odd Number");
+}
