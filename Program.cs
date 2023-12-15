@@ -149,7 +149,7 @@ Console.WriteLine(DelegateExample.getNumber());
 c2(200);
 Console.WriteLine(DelegateExample.getNumber());
 
- */
+
 
 // Instantiate EVENTS, The Subscriber Model
 
@@ -163,3 +163,9 @@ static void EventMessage()
 {
     Console.WriteLine("Event Executed : Odd Number");
 }
+
+*/
+
+// Call Anonymous Method Example Class
+AnonymousMethodExample.InvokeMethod();
+
