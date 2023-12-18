@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using coreConsoleApplication;
+using System.Linq.Expressions;
 
 Console.WriteLine("Hello! Welcome to the World of C#!\n");
 
@@ -164,8 +165,41 @@ static void EventMessage()
     Console.WriteLine("Event Executed : Odd Number");
 }
 
-*/
+
 
 // Call Anonymous Method Example Class
 AnonymousMethodExample.InvokeMethod();
 
+
+
+// Expression Lambda:
+
+// Lambda Arrays Example
+var numbers = new int[] { 2, 4, 6, 5, 1, 3, 5, 7 };
+// Count the number of '5' in the above Array
+var count = numbers.Count(x => x == 5);
+Console.WriteLine(count);
+
+// Statement Lambda:
+// Using the return statement 
+List<int> numbers2 = new List<int> { 2, 4, 6, 5, 1, 3, 5, 7 };
+count = numbers.Count(x => { return x == 5; });
+Console.WriteLine(count);
+*/
+
+// Expression Tree Lambda:
+// we are parsing 3 strings, two strings are the input and another is a return type.
+Func<string,string,string> stringJoins =(str1,str2) => string.Concat(str1,str2);   
+
+Expression< Func<string, string, string>> stringJoinExpr = (str1, str2) => string.Concat(str1, str2);
+
+// Invoke the epression 
+var func = stringJoinExpr.Compile();
+var result = func("Hello", "World");
+Console.WriteLine(result);  
+
+// OR
+
+// Combine the two hydrations one line
+result = stringJoinExpr.Compile()("Hello","Everyone");
+Console.WriteLine(result);
